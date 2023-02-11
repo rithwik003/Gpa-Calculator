@@ -72,6 +72,16 @@
                 border-width: 5px;
                 border-radius:8px;
             }
+            .z11{
+                border-style: double;
+                border-width: 5px;
+                border-radius:8px;
+            }
+            .z12{
+                border-style: double;
+                border-width: 5px;
+                border-radius:8px;
+            }
             .submit{
                 background-color:rgb(239, 87, 147);
                 color: black;
@@ -451,6 +461,73 @@
                             <option value="20">20</option>
                         </select>
                     </div>
+                    <p style="font-size: 20px; color: rgb(76, 2, 95);"><strong><u>Course-11</u></strong></p>
+                    
+                    <div class="z11">
+                        <label>Grade</label>
+                        &nbsp;
+                        <select id="b21" name="grade" style="background-color:rgba(237, 191, 221, 0.785); padding:6px">
+                            <option value="0">--Grade--</option>   
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                            <option value="0">N</option>
+                        </select>
+                    
+                    
+                        &nbsp;
+                    
+                        <label>Credits &nbsp;</label>
+                        &nbsp;
+                        <select id="b22" name="credits" style="background-color:rgba(237, 191, 221, 0.785); padding:6px">
+                            <option value="0">--Credits--</option>
+                            <option value="1">1</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="20">20</option>
+                        </select>
+                    </div>
+
+                    <p style="font-size: 20px; color: rgb(76, 2, 95);"><strong><u>Course-12</u></strong></p>
+                    
+                    <div class="z12">
+                        <label>Grade</label>
+                        &nbsp;
+                        <select id="b23" name="grade" style="background-color:rgba(237, 191, 221, 0.785); padding:6px">
+                            <option value="0">--Grade--</option>   
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                            <option value="0">N</option>
+                        </select>
+                    
+                    
+                        &nbsp;
+                    
+                        <label>Credits &nbsp;</label>
+                        &nbsp;
+                        <select id="b24" name="credits" style="background-color:rgba(237, 191, 221, 0.785); padding:6px">
+                            <option value="0">--Credits--</option>
+                            <option value="1">1</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="20">20</option>
+                        </select>
+                    </div>
                     <br>
                 </div>
                 <br>
@@ -531,8 +608,23 @@
                     let c20 = selectElement.options[selectElement.selectedIndex].value;
                     
                     let d10=(c19*c20);
+                    
+                    selectElement = document.querySelector('#b21');
+                    let c21 = selectElement.options[selectElement.selectedIndex].value;
+                    selectElement = document.querySelector('#b22');
+                    let c22 = selectElement.options[selectElement.selectedIndex].value;
+                    
+                    let d11=(c21*c22);
 
-                    let tot=(d1+d2+d3+d4+d5+d6+d7+d8+d9+d10)/(parseFloat(c2)+parseFloat(c4)+parseFloat(c6)+parseFloat(c8)+parseFloat(c10)+parseFloat(c12)+parseFloat(c14)+parseFloat(c16)+parseFloat(c18)+parseFloat(c20));
+                    selectElement = document.querySelector('#b23');
+                    let c23 = selectElement.options[selectElement.selectedIndex].value;
+                    selectElement = document.querySelector('#b24');
+                    let c24 = selectElement.options[selectElement.selectedIndex].value;
+                    
+                    let d12=(c23*c24);
+
+                    let tot=(d1+d2+d3+d4+d5+d6+d7+d8+d9+d10+d11+d12)/(parseFloat(c2)+parseFloat(c4)+parseFloat(c6)+parseFloat(c8)+parseFloat(c10)+parseFloat(c12)+parseFloat(c14)+parseFloat(c16)+parseFloat(c18)+parseFloat(c20)+parseFloat(c22)+parseFloat(c24));
+                    
                     document.querySelector('.output').textContent =tot.toFixed(2);
                 }
             </script>
